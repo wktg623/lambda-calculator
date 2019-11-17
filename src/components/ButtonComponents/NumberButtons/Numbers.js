@@ -19,7 +19,8 @@ const Numbers = (props) => {
     <div>
     {
     numberState.map(number =>{
-       return  <NumberButton key = {number} number = {number}/>;
+       return  <NumberButton key = {number} number = {number}
+        addNumber = {props.addNumber}/>;
       })}
     </div>
     )

@@ -4,11 +4,11 @@ export const OperatorButton = (props) => {
   
   
   
-  console.log(props)
+  console.log(props);
 
   return (
     <>
-    <button>
+    <button className = 'operatorButtons'>
     {props.operator.char}
     </button>
    

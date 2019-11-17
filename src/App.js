@@ -19,16 +19,19 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 const [displayValue, displayValueChange] = useState(0);
-const addNumber = (number) => {displayValueChange(displayValue => displayValue + number)}
+ const addNumber = (number) =>
+  {displayValueChange(displayValue => displayValue + number)}
 
+ const addOperator = (operator) =>
+  {displayValueChange(displayValue => displayValue + operator)}
 
   return (
     <div className="container">
       <Logo />
       <div className="App">
         <Display number = {displayValue} />
-        <Numbers/>
-        <Operators />
+        <Numbers addNumber = {addNumber}/>
+        <Operators addOperator = {addOperator} />
         <Specials/>
         
 
